@@ -1,0 +1,368 @@
+// for the buttons
+.filterButtonWrapper {
+  @apply flex flex-row h-[36px] gap-4 items-start self-stretch;
+}
+
+.filterTabs {
+  @apply flex flex-row  h-[38px] w-[353px] gap-1 self-stretch;
+}
+.avatar {
+  @apply w-12 h-12;
+}
+
+.filterSeperator {
+  @apply block w-[1px] self-stretch bg-[#d9d9dc];
+}
+
+.clears {
+  @apply inline-flex items-center h-6 rounded-md bg-red-50 px-3 py-3 
+        text-sm font-medium text-red-700 ring-1 ring-inset ring-red-600/20;
+}
+
+// Template Boxes
+.templateBoxContainer {
+  @apply flex flex-row flex-1 gap-[20px];
+}
+
+.templateBox {
+  @apply w-[250px] flex  flex-col  justify-between items-start 
+        self-stretch rounded-lg border-[1px] border-solid gap-4 p-3;
+  border-color: var(--neutral-colors-swatch-fefefe, #d9d9dc);
+}
+
+.templateBox:hover {
+  border-color: var(--Active-Border, #9fc0ff);
+  outline: 2px solid var(--Active-Border, #9fc0ff);
+  background: var(--Highlight-Blue, #f5f7fc);
+}
+
+.templateBoxTitle {
+  @apply overflow-hidden text-ellipsis text-[15px] font-bold leading-[19px];
+  color: var(--Text-Headings, #4b5363);
+}
+
+.templateBoxTitleContainer {
+  @apply flex flex-col flex-1 items-start gap-1;
+}
+
+.templateBoxContentContainer {
+  @apply flex h-[59.59] flex-col flex-1 justify-end items-start gap-1 self-stretch;
+}
+
+.createTemplateBox {
+    @apply flex flex-col items-center justify-center gap-[10px] w-[250px] 
+        rounded-[5px] bg-white py-[28px] px-[26px] cursor-pointer;
+    border: 1px solid #d9d9dc;
+}
+
+.createTemplateBoxTitle {
+  @apply text-primary text-center text-[13px] font-semibold leading-[18px];
+  width: 130.96px;
+}
+
+// Subsections
+.subsection {
+  @apply flex items-start gap-1 self-stretch;
+  // @apply grid grid-cols-3 col-start-3
+}
+
+.subsectionKey {
+  @apply grow max-w-[67px] text-ellipsis text-[11px] leading-[16px];
+  color: #858585;
+}
+
+.subsectionValue {
+  @apply items-center justify-start text-ellipsis text-[11px] font-semibold leading-4;
+  color: var(--neutral-colors-swatch-f-9-f-9-f-9, #73737b);
+}
+
+// Filters
+.filterStore {
+  @apply flex flex-row justify-start items-start  gap-2 my-4 mx-0;
+}
+
+.filterMenu {
+  @apply flex h-6 py-[10px]  justify-center items-center  rounded-[3px] text-center text-xs
+        font-medium leading-5;
+  background: var(--Highlight-Blue, #f5f7fc);
+  color: #325393;
+}
+
+.filterMenuClear {
+  display: flex;
+  height: 24px;
+  padding: 10px 12px;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  border-radius: 3px;
+  color: #933232;
+  text-align: center;
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+  background: var(--ui-colors-fire-engine-red-error-swatch-fcf-3-f-3, #fcf3f3);
+}
+
+.first_frame {
+  @apply flex flex-col items-start grow;
+}
+
+.first_innerFrame {
+  @apply flex w-full flex-row items-start justify-between gap-2;
+}
+
+.name_text {
+  @apply flex text-lg font-semibold leading-5 gap-2 mb-2;
+
+  color: #4b5363;
+}
+
+.docType {
+  @apply w-full h-4 text-[13px] not-italic font-semibold leading-[normal] mb-2;
+
+  color: var(--neutral-colors-swatch-d-7-d-7-d-7, #3d404b);
+}
+
+.descriptionDetails {
+  @apply self-stretch  text-[13px] not-italic font-normal leading-[19px] mb-4 p-0.5;
+  color: var(--neutral-colors-swatch-f-9-f-9-f-9, #73737b);
+}
+
+.edit_button {
+  display: flex;
+  padding: 4px 8px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  border-radius: 4px;
+  border: 1px solid #3f81fe;
+  color: #3f81fe;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 0.4px;
+}
+
+.addUserButton {
+  display: flex;
+  padding: 4px 8px;
+  justify-content: flex-end;
+  align-items: flex-end;
+  gap: 8px;
+  border-radius: 4px;
+  border: 1px solid #3f81fe;
+  color: #3f81fe;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 0.4px;
+}
+
+.rowInfo_Container {
+  @apply h-fit grid grid-cols-[150px_480px] grid-rows-[repeat(16px,7)] rounded-md border-solid
+     border text-[13px] not-italic font-medium leading-[normal] my-6 px-4 py-3 border-[#e1e1e1] gap-2;
+  color: var(--neutral-colors-600, #606069);
+  background: rgba(247, 250, 252, 0.8);
+}
+
+.access_list_Container {
+  @apply flex items-start justify-between gap-2.5 self-stretch mb-1 px-0 py-1 rounded-[4px_4px_0px_0px];
+}
+
+.accessList {
+  @apply text-[13px] font-semibold;
+  color: var(--ceq-core-text-subdued, #595a6c);
+}
+
+.user_Access_List {
+  @apply flex flex-col items-start gap-1 text-[13px] not-italic font-normal leading-[normal];
+  color: #83849b;
+}
+
+///for data not found-----------------------------------------------------------------
+
+.wentWrong_Container {
+  @apply flex h-screen flex-col justify-center items-center gap-[21px];
+  // height: 100vh;
+}
+
+.wentWrong_text_Container {
+  @apply flex flex-col items-start gap-8;
+}
+
+.wentWrong_text {
+  @apply flex flex-col items-start gap-6;
+}
+
+.wentWrong_Button {
+  @apply text-[#3b3b3b] gap-2 rounded px-[18px] py-2.5;
+}
+
+.text_css1 {
+  @apply text-[#3b3b3b] text-[32px] not-italic font-semibold leading-5;
+}
+
+.text_css2 {
+  @apply text-[#3b3b3b] text-[22px] not-italic font-semibold leading-5;
+}
+
+////table-------------------------
+
+.table {
+  width: 100%;
+  height: fit-content;
+  margin-top: 0;
+  border-collapse: collapse;
+  border: 2px solid #f3f3f5;
+  border-radius: 4px;
+  // height: 500px;
+  overflow-y: auto;
+  
+  th {
+    height: fit-content;
+    color: #4b5363;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20px;
+  }
+
+  td {
+    width: fit-content;
+    // max-width: 15px;
+    text-overflow: ellipsis;
+    text-wrap: nowrap;
+    padding: 8px 16px;
+    height: fit-content;
+    font-size: 14px;
+    font-style: normal;
+    line-height: 20px;
+    overflow:hidden
+  }
+
+  tr:nth-child(even) {
+    background-color: #F5F7FC;
+  }
+
+  tr:nth-child(odd) {
+    background-color: white;
+  }
+}
+
+.table_DropDown {
+  width: 166px;
+  display: flex;
+  padding: 8px 0px;
+  position: relative;
+  right: 50px;
+  flex-direction: column;
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: #fff;
+  height: 176px;
+  overflow-x: hidden;
+  box-shadow: 1px 9px 22px 0 rgba(0, 0, 0, 0.2);
+}
+
+.table_DropDown.show {
+  position: relative;
+}
+
+.item-menu {
+  z-index: 10;
+}
+
+.table_DropDown.vis_top {
+  height: 160px;
+  z-index: 10;
+  position: absolute;
+  bottom: 20px;
+  border-radius: 2px;
+  border: 2px solid #f3f3f5;
+}
+
+.list {
+  width: 163px;
+  height: 32px;
+  display: flex;
+  justify-content: flex-start;
+  align-self: stretch;
+  padding: 8px;
+  gap: 8px;
+  cursor: pointer;
+  overflow: hidden;
+  overflow-x: hidden;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+}
+
+.list:hover {
+  background-color: #f5f5f5;
+}
+
+th .tableDataNotFound {
+  background-color: #f2f2f2;
+  height: 210px;
+  padding: 1px 0px;
+  margin: auto;
+  text-align: center;
+}
+
+.notFoundTextContainer {
+  @apply text-center w-[214px] h-12 flex flex-col justify-center items-center gap-1 mx-auto my-7;
+}
+
+.item-1 {
+  @apply text-lg font-medium leading-[22px];
+  color: var(--neutral-colors-swatch-fbfbfb, #89888f);
+}
+
+.item-2 {
+  @apply text-base not-italic font-normal leading-[22px];
+  color: var(--neutral-colors-swatch-fbfbfb, #89888f);
+}
+
+.different {
+  @apply text-base not-italic font-medium leading-[22px];
+  color: var(--neutral-colors-swatch-fbfbfb, #89888f);
+}
+
+.onhoverImg{
+  // background-color: #051D4C;
+}
+.onhoverImg:hover,
+.onhoverImg:active,
+.onhoverImg:focus {
+  @apply text-[#3F81FE];
+}
+
+
+.onClick {
+  @apply flex flex-1 cursor-pointer ;
+}
+
+.onClick:hover,
+.onClick:active,
+.onClick:focus {
+  @apply bg-[#3F81FE] text-[white];
+}
+// .onClick:first-child{
+//   @apply bg-[#3F81FE] text-[white];
+// }
+.onRemoveHover {
+  @apply bg-[#F3F3F5] text-[#606069];
+}
+
+.defaultButton {
+  @apply cursor-pointer bg-[#3F81FE] text-[white];
+}
+.defaultButton:active,
+.defaultButton:hover,
+.defaultButton:focus {
+  @apply bg-[#3F81FE] text-[white];
+}

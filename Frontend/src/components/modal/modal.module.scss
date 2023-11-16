@@ -1,0 +1,23 @@
+.backdrop {
+    @apply fixed top-0 left-0 right-0 bottom-0 bg-black/40 z-10;
+}
+
+.container {
+    @apply absolute top-[60.5px] left-0 bottom-2 right-0 z-10 pointer-events-none;
+}
+
+.content {
+    @apply fixed top-[67px] bottom-2 right-[130px] w-[710px] rounded-md bg-white z-20 pointer-events-auto p-6 overflow-scroll;
+}
+
+.content::-webkit-scrollbar {
+    display: none;
+}
+
+.contentLeft {
+    @apply left-0;
+}
+
+.contentRight {
+    @apply right-2;
+}

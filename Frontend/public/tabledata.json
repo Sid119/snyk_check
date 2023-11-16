@@ -1,0 +1,132 @@
+[
+  {
+    "name": "cloudEQ POA (20230215)",
+    "owner": "Melissa Rowe",
+    "category": "SLA",
+    "subCategory": "Service-Based",
+    "templateId": "CEQ0001",
+    "lastModified": "08.23.2023",
+    "status": "Draft",
+    "access": "/assets/Edit.svg"
+  },
+  {
+    "name": "cloudEQ SOW (20230215)",
+    "owner": "Lisa O'Keefe",
+    "category": "SOW",
+    "subCategory": "Functional",
+    "templateId": "CEQ0002",
+    "lastModified": "08.28.2023",
+    "status": "Published",
+    "access": "/assets/View Access.svg"
+  },
+  {
+    "name": "cloudEQ MSA (20230215)",
+    "owner": "Gayle Yost",
+    "category": "MSA",
+    "subCategory": "NA",
+    "templateId": "CEQ0003",
+    "lastModified": "08.28.2023",
+    "status": "Published",
+    "access": "/assets/View Access.svg"
+  },
+  {
+    "name": "cloudEQ NDA (20230215)",
+    "owner": "Melissa Rowe",
+    "category": "NDA",
+    "subCategory": "Unilateral",
+    "templateId": "CEQ0004",
+    "lastModified": "09.03.2023",
+    "status": "Published",
+    "access": "/assets/View Access.svg"
+  },
+  {
+    "name": "cloudEQ POA (20230215)",
+    "owner": "Blake Fisher",
+    "category": "SLA",
+    "subCategory": "Customer-Based",
+    "templateId": "CEQ0005",
+    "lastModified": "09.03.2023",
+    "status": "Published",
+    "access": "/assets/View Access.svg"
+  },
+  {
+    "name": "cloudEQ SOW (20230215)",
+    "owner": "Melissa Rowe",
+    "category": "SOW",
+    "subCategory": "Performance",
+    "templateId": "CEQ0006",
+    "lastModified": "09.04.2023",
+    "status": "Published",
+    "access": "/assets/View Access.svg"
+  },
+  {
+    "name": "cloudEQ MSA (20230215)",
+    "owner": "Merle Green",
+    "category": "MSA",
+    "subCategory": "NA",
+    "templateId": "CEQ0007",
+    "lastModified": "09.08.2023",
+    "status": "Published",
+    "access": "/assets/View Access.svg"
+  },
+  {
+    "name": "cloudEQ NDA (20230215)",
+    "owner": "Melissa Rowe",
+    "category": "NDA",
+    "subCategory": "Bilateral",
+    "templateId": "CEQ0008",
+    "lastModified": "09.09.2023",
+    "status": "Draft",
+    "access": "/assets/Edit.svg"
+  },
+  {
+    "name": "cloudEQ POA (20230215)",
+    "owner": "Shannon Roob",
+    "category": "SLA",
+    "subCategory": "Multi-Level",
+    "templateId": "CEQ0009",
+    "lastModified": "09.12.2023",
+    "status": "Published",
+    "access": "/assets/View Access.svg"
+  },
+  {
+    "name": "cloudEQ SOW (20230215)",
+    "owner": "Samuel Bailey",
+    "category": "SOW",
+    "subCategory": "Design",
+    "templateId": "CEQ0010",
+    "lastModified": "09.14.2023",
+    "status": "Published",
+    "access": "/assets/View Access.svg"
+  },
+  {
+    "name": "cloudEQ MSA (20230215)",
+    "owner": "Melissa Rowe",
+    "category": "MSA",
+    "subCategory": "NA",
+    "templateId": "CEQ0011",
+    "lastModified": "09.16.2023",
+    "status": "Draft",
+    "access": "/assets/Edit.svg"
+  },
+  {
+    "name": "cloudEQ NDA (20230215)",
+    "owner": "Rachael Hartmann",
+    "category": "NDA",
+    "subCategory": "Multilateral",
+    "templateId": "CEQ0012",
+    "lastModified": "09.16.2023",
+    "status": "Published",
+    "access": "/assets/View Access.svg"
+  },
+  {
+    "name": "cloudEQ POA (20230215)",
+    "owner": "Melissa Rowe",
+    "category": "SLA",
+    "subCategory": "Hierarchical",
+    "templateId": "CEQ0013",
+    "lastModified": "09.20.2023",
+    "status": "Draft",
+    "access": "/assets/Edit.svg"
+  }
+]

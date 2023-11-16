@@ -1,0 +1,128 @@
+.filter {
+    @apply flex w-[100px] py-2 px-6 justify-center items-center gap-2 grow rounded-md text-[#4e5059] 
+        cursor-pointer text-[15px];
+    border: 1px solid var(--neutral-colors-swatch-fefefe, #d9d9dc);
+    background: var(--neutral-colors-swatch-ffffff, #fff);
+}
+
+.filter:hover,
+.filter:focus,
+.filterActive {
+    @apply rounded-[4px] bg-[#F2F5FC];
+    border: 1px solid var(--active-border, #9fc0ff);
+    outline: 1px solid #9fc0ff;
+}
+
+.dropdownContainerInactive {
+    @apply w-0 overflow-hidden absolute;
+}
+
+.dropdownContainerActive {
+    @apply h-[144px] rounded-[4px] flex relative shrink-0 z-10 cursor-pointer;
+}
+
+.commonDropdowns {
+    @apply w-[166px] flex py-2 px-0 flex-col items-start self-stretch 
+         cursor-pointer bg-white focus:bg-secondary rounded-[4px];
+    box-shadow: 5px -1px 8px 0 rgba(0, 0, 0, 0.2);
+    // box-shadow:
+    // 0px 0px 0px 0px rgba(0, 0, 0, 0.1),
+    // 0px 17px 38px 0px rgba(0, 0, 0, 0.1),
+    // 0px 69px 69px 0px rgba(0, 0, 0, 0.09),
+    // 0px 154px 93px 0px rgba(0, 0, 0, 0.05),
+    // 0px 274px 110px 0px rgba(0, 0, 0, 0.01),
+    // 0px 428px 120px 0px rgba(0, 0, 0, 0);
+}
+
+.commonDropdownsActive {
+    @extend .commonDropdowns;
+    // width: 166px;
+    // height: 144px;
+    // display: flex;
+    // padding: 8px 0px;
+
+    // flex-direction: column;
+    // align-items: flex-start;
+    // align-self: stretch;
+    // background-color: #fff;
+    // overflow-x: hidden;
+    // box-shadow: 5px -1px 8px 0 rgba(0, 0, 0, 0.2);
+    // z-index: 10;
+    // cursor: pointer;
+    // @apply focus:bg-secondary;
+}
+
+.disp {
+    width: 166px;
+    height: 144px;
+    display: flex;
+    flex-direction: column;
+    padding: 3px 10px;
+    margin-bottom: 10px;
+    color: var(--neutral-colors-900, #2d333e);
+    align-items: flex-start;
+    align-self: stretch;
+    background-color: #fff;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.filterItem {
+    @apply flex py-2 px-4 gap-[10px] self-stretch items-center justify-between text-[14px] leading-[16px] cursor-pointer;
+    color: var(--neutral-colors-900, #2d333e);
+}
+
+.filterItem:hover {
+    background-color: #f3f3f5;
+}
+
+.filterCheckItem {
+    @apply justify-start;
+}
+
+.disp:hover {
+    background-color: #f3f3f5;
+}
+
+.commonDropdowns .disp .subcat {
+    display: flex;
+
+    justify-content: space-between;
+    width: 136px;
+    cursor: pointer;
+    @apply focus:bg-secondary;
+}
+
+#subcat {
+    width: 14px;
+}
+
+.commonDropdowns .dis:hover {
+    background-color: #f5f5f5;
+}
+
+.dropDownInactive {
+    width: 0;
+    height: 0;
+    overflow: hidden;
+}
+
+.nested-dropdown {
+    display: flex;
+    flex-direction: column;
+    margin-top: 8px;
+    padding-left: 8px;
+    border-left: 1px solid #ddd;
+}
+
+.sub-category-dropdown {
+    display: none;
+    width: 100%;
+    background-color: #fff;
+    border-top: 1px solid #ddd;
+    padding: 8px;
+}
+
+.commonDropdowns .selected + .sub-category-dropdown {
+    display: block;
+}

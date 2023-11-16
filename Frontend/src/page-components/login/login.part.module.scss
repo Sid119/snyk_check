@@ -1,0 +1,96 @@
+.navbarLogin {
+  @apply flex flex-row  h-[52px] bg-white px-6 py-3 gap-3;
+}
+.seperator {
+  @apply h-5 w-[1px] border border-gray-400;
+}
+.heading {
+  @apply text-[#3D404B] leading-[27px] text-[22px] font-extrabold;
+}
+.loginContainer {
+  margin: 149px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+.loginText {
+  width: 311px;
+  color: #fff;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 20px;
+}
+.loginFileds {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.line {
+  display: flex;
+  margin-top: 32px;
+  color: white;
+  align-items: center;
+  justify-content: center;
+
+  &:before {
+    content: "";
+    flex: 1;
+    margin-right: 5px;
+    background-color: #73737b;
+    height: 1px;
+  }
+  &:after {
+    content: "  ";
+    flex: 1;
+    margin-left: 5px;
+    height: 1px;
+    background-color: #73737b;
+  }
+}
+
+.signinContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+  color: #fff;
+}
+
+.signIn {
+  display: flex;
+  width: 300px;
+  min-width: 78px;
+  padding: 10px 16px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  border-radius: 4px;
+  background: #3f81fe;
+  margin-top: 32px;
+  color: #fff;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 13px;
+}
+
+.ssoSign {
+  display: flex;
+  width: 300px;
+  min-width: 78px;
+  padding: 10px 16px;
+  justify-content: center;
+  border-radius: 4px;
+  border: 2px solid #3f81fe;
+  background: #fff;
+  align-items: center;
+  gap: 8px;
+  color: #3f81fe;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 13px;
+}
