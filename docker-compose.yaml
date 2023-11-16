@@ -1,0 +1,139 @@
+services:
+  template-service:
+    build:
+      context: .
+      dockerfile: ./Backend/ceq-template-service/Dockerfile
+    env_file:
+      - .env
+    ports:
+      - ${TEMPLATE_SERVICE_PORT}:3000
+
+  account-service:
+    build:
+      context: .
+      dockerfile: ./Backend/ceq-account-service/Dockerfile
+    env_file:
+      - .env
+    ports:
+      - ${ACCOUNT_SERVICE_PORT}:3000
+
+  client-service:
+    build:
+      context: .
+      dockerfile: ./Backend/ceq-client-service/Dockerfile
+    env_file:
+      - .env
+    ports:
+      - ${CLIENT_SERVICE_PORT}:3000
+      
+  clause-service:
+    build:
+      context: .
+      dockerfile: ./Backend/ceq-clause-service/Dockerfile
+    env_file:
+      - .env
+    ports:
+      - ${CLAUSE_SERVICE_PORT}:3000
+
+  frontend:
+    build: 
+      context: .
+      dockerfile: ./Frontend/Dockerfile
+      args:
+        - TEMPLATE_API_URL=${TEMPLATE_API_URL}
+        - ACCOUNT_API_URL=${ACCOUNT_API_URL}
+    env_file:
+      - .env
+    ports:
+      - ${WEB_PORT}:3000
+
+  localstack:
+    image: localstack/localstack
+    ports:
+      - "4566:4566"
+    environment:
+      - SERVICES=s3
+    volumes:
+      - localstack_data:/tmp/localstack
+    expose:
+      - "4566"
+
+  rabbitmq:
+    image: 'bitnami/rabbitmq'
+    environment:
+      - RABBITMQ_USERNAME=${RABBITMQ_USERNAME}
+      - RABBITMQ_PASSWORD=${RABBITMQ_PASSWORD}
+    ports:
+      - 15672:15672
+      - 5672:5672
+    volumes:
+      - 'rabbitmqstats_data:/bitnami/rabbitmq/mnesia'
+    networks:
+      - elastic
+
+  redis:
+    image: bitnami/redis
+    environment:
+      - REDIS_PASSWORD=${REDIS_PASSWORD}
+    ports:
+      - ${REDIS_PORT}:6379
+    volumes:
+      - redis:/bitnami/redis/data
+    networks:
+      - elastic
+
+  elastic:
+    image: bitnami/elasticsearch:8.8.1
+    restart: "always"
+    volumes:
+      - elastic:/bitnami/elasticsearch/data
+    ports:
+      - 9200:9200
+      - 9201:3002
+    networks:
+      - elastic
+
+  kibana:
+    image: bitnami/kibana:8.8.1
+    restart: "always"
+    environment:
+      - KIBANA_ELASTICSEARCH_URL=elastic
+      - KIBANA_ELASTICSEARCH_PORT_NUMBER=9200
+    ports:
+      - 5601:5601
+    links:
+      - elastic:elasticsearch
+    volumes:
+      - kibana:/bitnami/kibana
+    networks:
+      - elastic
+
+  dynamodb-local:
+    command: "-jar DynamoDBLocal.jar -sharedDb -dbPath /data"
+    image: "amazon/dynamodb-local:latest"
+    working_dir: /home/dynamodblocal
+    volumes:
+      - ./dynamodb-data:/data
+    ports:
+      - "8000:8000"
+    expose:
+      - "8000"
+
+  docs:
+    build:
+      context: .
+      dockerfile: ./Dockerfile.docs
+    ports:
+      - "38080:80"
+    volumes:
+      - ./docs:/usr/share/nginx/html
+
+volumes:
+  localstack_data:
+  elastic:
+  kibana:
+  rabbitmqstats_data:
+  redis:
+
+networks:
+  elastic:

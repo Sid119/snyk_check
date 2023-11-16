@@ -1,0 +1,8 @@
+FROM node:18 AS BUILD
+WORKDIR /app
+COPY . .
+RUN yarn
+RUN yarn docs
+
+FROM nginx
+COPY --from=BUILD /app/docs /usr/share/nginx/html

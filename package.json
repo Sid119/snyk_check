@@ -1,0 +1,19 @@
+{
+    "name": "cms-development-code",
+    "private": true,
+    "scripts": {
+        "test-account-service": "npm run test -w Backend/ceq-account-service",
+        "run-account-service": "npm run test -w Backend/ceq-account-service",
+        "docs": "npx typedoc",
+        "docs-all": "npm run docs  --workspaces --if-present"
+    },
+    "workspaces": [
+        "Backend/*",
+        "ceq-common-service",
+        "Frontend"
+    ],
+    "dependencies": {
+        "typedoc": "^0.24.7",
+        "typescript": "^5.0.4"
+    }
+}

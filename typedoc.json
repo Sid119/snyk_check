@@ -1,0 +1,14 @@
+{
+    "$schema": "https://typedoc.org/schema.json",
+    "entryPoints": [
+        "Backend/*",
+        "ceq-common-service",
+        "Frontend"
+    ],
+    "exclude": [
+        "./**/*.{spec.ts,css}"
+    ],
+    "name": "CMS Development",
+    "entryPointStrategy": "packages",
+    "includeVersion": true
+}

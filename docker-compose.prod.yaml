@@ -1,0 +1,64 @@
+services:
+  template-service:
+    build: ./Backend/template-service
+    env_file:
+      - .env
+    ports:
+      - ${TEMPLATE_SERVICE_PORT}:3000
+    depends_on:
+      - documentserver
+      - onlyoffice
+  
+  account-service:
+    build: ./Backend/account-service
+    env_file:
+      - .env
+    ports:
+      - ${ACCOUNT_SERVICE_PORT}:3000
+
+  client-service:
+    build: ./Backend/client-service
+    env_file:
+      - .env
+    ports:
+      - ${CLIENT_SERVICE_PORT}:3000
+
+  clause-service:
+    build: ./Backend/clause-service
+    env_file:
+      - .env
+    ports:
+      - ${CLAUSE_SERVICE_PORT}:3000
+
+  frontend:
+    build: ./Frontend
+    env_file:
+      - .env
+    ports:
+      - ${WEB_PORT}:3000
+    depends_on:
+      - template-service
+      - account-service
+
+  documentserver:
+    image: collabora/code
+    restart: always
+    ports:
+      - ${COLLABORA_PORT}:9980
+    environment:
+      - DONT_GEN_SSL_CERT=true
+      - 'dictionaries="en"'
+      - 'extra_params=--o:user_interface.mode=classic --o:ssl.enable=false'
+    
+  onlyoffice:
+    image: onlyoffice/documentserver
+    ports:
+      - ${ONLYOFFICE_PORT}:80
+    environment:  
+      - WOPI_ENABLED=true
+      - JWT_ENABLED=true
+
+volumes:
+  minio_data:
+
+  
