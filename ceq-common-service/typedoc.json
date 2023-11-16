@@ -1,0 +1,10 @@
+{
+    "$schema": "https://typedoc.org/schema.json",
+    "entryPoints": [
+        "./src/**/*"
+    ],
+    "exclude": [
+        "./**/*.{spec.ts,css}"
+    ],
+    "excludeNotDocumented": true,
+}
