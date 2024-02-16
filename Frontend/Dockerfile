@@ -1,4 +1,4 @@
-FROM node:18
+FROM node:21.0-bookworm-slim
 
 WORKDIR /ceq-common-service
 COPY ceq-common-service/package.json .
